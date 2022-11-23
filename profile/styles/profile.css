@@ -66,8 +66,9 @@
   font-weight: 500;
   font-family: notosansregular;
   margin: 23px 0 0 0;
-  padding: 0 0 0 25px;
+  padding: 5px 5px 5px 25px;
   float: left;
+  margin-bottom: 15px;
 }
 
 .profile_header .edit{
@@ -97,6 +98,7 @@
   font-size: 18px;
   line-height: 24px;
   font-family: Helvetica, Thonburi, Tahoma, sans-serif;
+  padding: 1%;
 }
 
 .profile_content .live{

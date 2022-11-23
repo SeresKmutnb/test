@@ -18,6 +18,8 @@ export default function User() {
     displayName: '',
     img: '',
     Tel: '',
+    firstName: '',
+    lastName: '',
     email: '',
     Live: [{}],
   })
@@ -75,6 +77,8 @@ export default function User() {
           displayName: result.data.userData.displayName,
           img: result.data.userData.img,
           Tel: result.data.userData.tel,
+          firstName: result.data.userData.firstName,
+          lastName: result.data.userData.lastName,
           email: result.data.email,
           Live: result.data.userData.address,
         })
@@ -94,8 +98,9 @@ export default function User() {
           
           <div className='profile_name'>
             Name: {data.displayName}<br />
+            Fullname: {data.firstName} &nbsp; {data.lastName}<br />
             Tel: {data.Tel}<br />
-            Email: {data.email}<br />
+            Email: {data.email}
             {/* <label style={{color:'red',cursor:'pointer'}} >เปลี่ยนรหัสผ่าน</label> <br /> */}
             <br />
           </div>
@@ -138,10 +143,12 @@ export default function User() {
                   </div>
                   <div className={Modal.body}>
                     <form >
-                      <label>Name : </label><input placeholder={data.displayName} type='text' id="user" className={Modal.Name} ></input><br />
+                      <label>Name : </label><input placeholder={data.displayName} type='text' name="user" id="user" className={Modal.Name} ></input><br />
+                      <label>Firstname : </label><input placeholder={data.firstName} type='text' name="first" id="first" className={Modal.Name}></input><br />
+                      <label>Lastname : </label><input placeholder={data.lastName} type='text' name="last" id="last" className={Modal.Name}></input><br />
                       <label>Phone : </label><input placeholder={data.Tel} type='tel' name="tele" id="tele" maxLength='10' className={Modal.Phone}></input><br />
                       <label>Email : </label><input placeholder={data.email} type='email' name="mail" id="mail" className={Modal.Email}></input>
-                      <input className={Modal.edit_close} style={{ marginTop: '7px', marginLeft: '75%' }} type="button" onClick={() => (onClickedit(user.value, tele.value, mail.value), setShowModal(false))} value="Save"></input><br />
+                      <input className={Modal.edit_close} style={{ marginTop: '7px', marginLeft: '75%' }} type="button" onClick={() => (onClickedit(user.value, tele.value, mail.value, first.value, last.value), setShowModal(false))} value="Save"></input><br />
                     </form>
                   </div>
                 </div>
@@ -239,13 +246,15 @@ export default function User() {
       }
     </div>
   )
-  async function onClickedit(u, t, e) {
+  async function onClickedit(u, t, e, firstName, lastName) {
     /*set State และ update ค่าใน database*/
     if (u === '') u = data.displayName
     if (t === '') t = data.Tel
     if (e === '') e = data.email
+    if (firstName === '') firstName = data.firstName 
+    if (lastName === '') lastName = data.lastName
     const i = data.id
-    await axios.post('http://localhost:8000/users/update/users', { u, t, e, i })
+    await axios.post('http://localhost:8000/users/update/users', { u, t, e, i, firstName, lastName })
     .then(result => {
       console.log(result.data)
       toast.success('🦄 Your profile has been updated!', {
