@@ -1,0 +1,179 @@
+
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: #FFFFFF;
+    background: black;
+  }
+}
+.container {
+  padding: 0 20rem 0 20rem;
+  min-width: 250px;
+}
+
+@media screen and (max-width: 1700px) {
+  .container {
+    padding: 0 15rem 0 15rem;
+  }
+}
+
+@media screen and (max-width: 1376px) {
+  .container {
+    padding: 0 10rem 0 10rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    padding: 0 5rem 0 5rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    padding: 0 2rem 0 2rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    padding: 0rem;
+  }
+}
+
+.profile_header{
+  text-decoration: none solid rgb(2, 26, 36);
+  text-align: left;
+  display : flex;
+  align-items : center;
+  word-spacing: 0px;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: Helvetica, Thonburi, Tahoma, sans-serif;
+}
+
+.profile_header .images_profile{
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.profile_header .profile_name{
+  display : block;
+  font-weight: 500;
+  font-family: notosansregular;
+  margin: 23px 0 0 0;
+  padding: 0 0 0 25px;
+  float: left;
+}
+
+.profile_header .edit{
+  text-align: center;
+  margin-left: auto;
+  background-color: #FFFFFF;
+  border: 1px solid #00BF6C;
+  color: #00BF6C;
+  padding: 6px 12px 6px 12px;
+  min-width: 80px;
+  float: right;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.profile_header .edit:hover{
+  background-color: #00BF6C;
+  color: #FFFFFF;
+}
+
+.profile_content{
+  text-decoration: none solid rgb(2, 26, 36);
+  text-align: left;
+  display : flex;
+  align-items : center;
+  word-spacing: 0px;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: Helvetica, Thonburi, Tahoma, sans-serif;
+}
+
+.profile_content .live{
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.liveEdit {
+  text-align: center;
+  margin-left: auto;
+  background-color: #FFFFFF;
+  border: 1px solid #00BF6C;
+  color: #00BF6C;
+  padding: 6px 12px 6px 12px;
+  min-width: 40px;
+  float: right;
+  cursor: pointer;
+  border-radius: 30px;
+}
+.liveEdit:hover{
+  background-color: #00BF6C;
+  color:#FFFFFF
+}
+
+.liveDelete {
+  text-align: center;
+  background-color: #FFFFFF;
+  border: 1px solid red;
+  color: red;
+  padding: 6px 12px 6px 12px;
+  min-width: 40px;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.liveDelete:hover{
+  background-color: red;
+  color:#FFFFFF
+}
+
+.profile_content .edit{
+  text-align: center;
+  margin-left: auto;
+  background-color: #FFFFFF;
+  border: 1px solid #00BF6C;
+  color: #00BF6C;
+  padding: 6px 12px 6px 12px;
+  min-width: 80px;
+  float: right;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.profile_content .edit:hover{
+  background-color: #00BF6C;
+  color: #FFFFFF;
+}
+
+.liveAdd {
+  text-align: center;
+  background-color: #FFFFFF;
+  border: 1px solid #00BF6C;
+  color: #00BF6C;
+  padding: 6px 12px 6px 12px;
+  min-width: 40px;
+  display : flex;
+  align-items : center;
+  cursor: pointer;
+  border-radius: 30px;
+}
+.liveAdd:hover{
+  background-color: #00BF6C;
+  color:#FFFFFF
+}
+
+.profile_img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px
+}
